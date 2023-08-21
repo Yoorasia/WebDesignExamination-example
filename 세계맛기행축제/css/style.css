@@ -1,0 +1,287 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "맑은고딕";
+    color: #333333;
+}
+body{
+    background-color: #ffffff;
+}
+.allwrap{
+    display: flex;
+    margin: 0 auto;
+}
+/*헤더영역*/
+header{
+    width: 250px;
+    height: 650px;
+    background-color: lightpink;
+}
+.logo{
+    width: 250px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 210px;
+}
+nav{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainMenu{
+    width: 210px;
+    background-color: pink;
+}
+.mainMenu > li{
+    display: flex;
+    width: 210px;
+    height: 40px;
+    background-color: pink;
+}
+.mainMenu > li:hover >a{
+    background-color: lightcoral;
+    font-weight: bold;
+}
+.mainMenu > li > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subMenu{
+    position: absolute;
+    left: 230px;
+    width: 180px;
+    background-color: lightcoral;
+    z-index: 1;
+    display: none;
+}
+.subMenu > li{
+    width: 180px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subMenu>li>a{
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    font-weight: bold;
+    background-color: lightcoral;
+    color: #ffffff;
+    text-align: center;
+}
+.subMenu>li>a:hover{
+    background-color: pink;
+    color: #333333;
+}
+
+/*메인영역*/
+main{
+    width: 750px;
+}
+.imgSlider{
+    width: 750px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+.imgSlideList{
+    display: flex;
+    width: 2250px;
+}
+.imgSlider a{
+    width: 750px;
+}
+.imgSlider span{
+    width: 400px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 50px;
+    background-color: rgba(255, 255, 255, .5);
+    margin-left: 175px;
+    margin-top: 150px;
+}
+
+.contents{
+    display: flex;
+    justify-content: space-between;
+}
+.tab{
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: darkseagreen;
+    color: #ffffff;
+    margin-left: 10px;
+}
+.tab > h4{
+    color: #ffffff;
+}
+
+.notice{
+    width: 280px;
+    height: 200px;
+}
+.notice li a{
+    width: 280px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.notice li{
+    width: 280px;
+    height: 40px;
+}
+
+.notice li a p{
+    padding-left: 10px;
+}
+.notice li span{
+    float: right;
+    padding-right: 10px;
+}
+.notice li:nth-child(2n){
+    background-color: pink;
+}
+.notice li:hover{
+    background-color: rgb(247, 210, 216);
+}
+.gallery{
+    width: 280px;
+    height: 200px;
+}
+.galleryimgs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 160px;
+}
+.galleryimgs > a > img{
+    width: 75px;
+    margin: 5px;
+}
+.galleryimgs > a:hover > img{
+    opacity: 0.5;
+}
+.shortcut{
+    background-image: url(../Contents/shortcut.jpg);
+    width: 190px;
+    height: 200px;
+}
+.shortcut > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shortcut > a > h4{
+    width: 80px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, .5);
+    text-align: center;
+    padding-top: 5px;
+    color: #ffffff;
+}
+footer{
+    display: flex;
+    width: 750px;
+    height: 100px;
+    background-color: darkseagreen;
+}
+.footerLogo{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerLogo img{
+    mix-blend-mode: color-dodge;
+    width: 180px;
+}
+.footerMenu ul{
+    width: 550px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerMenu ul li{
+    margin: 0 10px;
+    padding-top: 20px;
+}
+.copy{
+    width: 550px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*모달레이어*/
+#modal{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    display: none;
+}
+#modal.active{
+    display: block;
+}
+.modal_up{
+    width: 500px;
+    height: 350px;
+    position: fixed;
+    left: 250px;
+    top: 150px;
+    background-color: #ffffff;
+}
+.uptitle{
+    margin-top: 30px;
+    text-align: center;
+    line-height: 16px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.upbody{
+    padding: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+.btn{
+    width: 80px;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background: palevioletred;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
